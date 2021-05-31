@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soecode.lyf.dao.FlightDao">
+
+</mapper>
+<!--<mapper namespace="wormday.springmvc.content.dao.ContactDao">   &lt;!&ndash; 命名空间，名字可以随意起，只要不冲突即可 &ndash;&gt;-->
+<!--    &lt;!&ndash; 对象映射，可以不写 &ndash;&gt;-->
+<!--    &lt;!&ndash; 查询功能，resultType 设置返回值类型 &ndash;&gt;-->
+<!--    <resultMap id="ContactResutMap" type="wormday.springmvc.content.model.Contact">-->
+<!--        <result property="id" column="id"/>-->
+<!--        <result property="name" column="name"/>-->
+<!--        <result property="stuid" column="stuid"/>-->
+<!--        <result property="sex" column="sex"/>-->
+<!--        <result property="qq" column="qq"/>-->
+<!--        <result property="mobile" column="mobile"/>-->
+<!--        <result property="email" column="email"/>-->
+<!--        <association property="classInfo" column="cid" javaType="wormday.springmvc.content.model.ClassInfo">-->
+<!--            <id property="id" column="cid"></id>-->
+<!--            <result property="name" column="cname"></result>-->
+
+<!--        </association>-->
+<!--    </resultMap>-->
+
+<!--    <select id="getAllContacts" resultMap="ContactResutMap">  &lt;!&ndash; 书写 SQL 语句 &ndash;&gt;-->
+<!--        select  c.*,ci.id as cid, ci.name as cname from Contact c left join ClassInfo ci on c.classId = ci.id-->
+<!--    </select>-->
+
+<!--    <select id="getAllClassInfos" resultType="wormday.springmvc.content.model.ClassInfo">  &lt;!&ndash; 书写 SQL 语句 &ndash;&gt;-->
+<!--        select * from classInfo-->
+<!--    </select>-->
+
+<!--    <select id="getAdmin2" parameterType="wormday.springmvc.content.model.Admin" resultType="wormday.springmvc.content.model.Admin">-->
+<!--        select * from admin where account = #{account} and password = #{password}-->
+<!--    </select>-->
+<!--    <insert id="addContact" parameterType="wormday.springmvc.content.model.Contact">-->
+<!--        insert into contact(name, stuid, sex, classId, mobile, email,qq)-->
+<!--         values-->
+<!--        ( #{name},#{stuid},#{sex},#{classInfo.classId},#{mobile},#{email},#{qq})-->
+<!--    </insert>-->
+<!--    <select id="isStuIdExisted2" parameterType="String" resultType="String">-->
+<!--        select stuid from contact where stuid= #{stuid}-->
+<!--    </select>-->
+<!--    <select id="getClassInfos" parameterType="int" resultType="wormday.springmvc.content.model.ClassInfo">-->
+<!--        select  from classinfo where id = ${id}-->
+<!--    </select>-->
+
+
+<!--<select id="queryContacts" resultMap="ContactResutMap">-->
+<!--    select  c.*,ci.id as cid, ci.name as cname from Contact c left join ClassInfo ci on c.classId = ci.id-->
+<!--     WHERE-->
+<!--    (c.name like concat('%',#{filter},'%')-->
+<!--    or stuid like concat('%',#{filter},'%')-->
+<!--    or mobile like concat('%',#{filter},'%')-->
+<!--    or qq like concat('%',#{filter},'%')-->
+<!--    or email like concat('%',#{filter},'%'))-->
+<!--    <if test='"m"== sex || "f"== sex'>-->
+<!--        and sex = #{sex}-->
+<!--    </if>-->
+<!--    <if test="classId > 0">-->
+<!--        and classId = #{classId}-->
+<!--    </if>-->
+<!--</select>-->
+<!--<update id="updateContact" parameterType="wormday.springmvc.content.model.Contact"  >-->
+<!--        update contact set name=#{name}, stuid=#{stuid}, sex=#{sex}, classId=#{classInfo.classId}, mobile=#{mobile}, email=#{email},qq=#{qq}  where id=#{id}-->
+<!-- </update>-->
+
+<!--    <delete id="deleteContact" parameterType="int">-->
+<!--        delete from contact where id=#{id}-->
+<!--    </delete>-->
+<!--</mapper>-->

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--.
 1`
   Created by IntelliJ IDEA.
@@ -53,7 +54,7 @@ ${pageContext.request.contextPath}
                 <!-- <span style=" margin-left:-15px; margin-right:20px;">企业商旅管理</span>-->
             </div>
             <ul class="nav navbar-nav nav-top-small userinfo" style="margin-left:-15px;">
-                <li class="dropdown"><a href="user/login.html" class="dropdown-toggle">
+                <li class="dropdown"><a href="${pageContext.request.contextPath}/login" class="dropdown-toggle">
                     请登录</a>
                 </li>
             </ul>
@@ -197,130 +198,171 @@ ${pageContext.request.contextPath}
 <!-- 列表开始 -->
 <div class="container mar-bottom-30 ">
     <div class="hangbanlist">
-        <div>
-            <!-- 表头 -->
-            <ul class="list-inline bor-bottom-solid-1  ">
-                <li class="w-percentage-25"><img src="img/air/3U.png" width="24" height="24"> <strong> 川航</strong> 3U8891<span
-                        class="gray-999 font12 mar-left-10">机型：空客320（中）</span></li>
-                <li class="text-right w80"> <strong class="time ">16:30</strong></li>
-                <li class=""> —— </li>
-                <li class="w80"> <strong class="time ">23:30</strong></li>
-                <li class="w100 text-right"> 成都双流T2</li>
-                <li class=""> —— </li>
-                <li class=" w100"> 北京首都T1 </li>
-                <li class="w-percentage-20 text-center"> <span class="gray-999 ">机建 + 燃油：</span><span class="gray-999 rmb font12">￥50
-								+ ￥20</span></li>
-            </ul>
-            <!-- 表头结束 -->
-            <!-- 表BODY -->
-            <div class="collapse " id="collapseExample2" style=" display:block;">
-                <div class="hangbanlist-body " style=" background-color:#FEFCFC;">
-                    <ul class="list-inline">
-                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>
-                        <li class="w-percentage-25">座位数：≥9</li>
-                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
+<%--        <div>--%>
+<%--            <!-- 表头 -->--%>
+<%--            <ul class="list-inline bor-bottom-solid-1  ">--%>
+<%--                <li class="w-percentage-25"><img src="img/air/3U.png" width="24" height="24"> <strong> 川航</strong> 3U8891--%>
+<%--                    <span class="gray-999 font12 mar-left-10">机型：空客320（中）</span>--%>
+<%--                </li>--%>
+<%--                <li class="text-right w80"> <strong class="time "></strong></li>--%>
+<%--                <li class=""> —— </li>--%>
+<%--                <li class="w80"> <strong class="time ">23:30</strong></li>--%>
+<%--                <li class="w100 text-right"> 成都双流T2</li>--%>
+<%--                <li class=""> —— </li>--%>
+<%--                <li class=" w100"> 北京首都T1 </li>--%>
+<%--                <li class="w-percentage-20 text-center"> <span class="gray-999 ">机建 + 燃油：</span><span class="gray-999 rmb font12">￥50--%>
+<%--								+ ￥20</span></li>--%>
+<%--            </ul>--%>
+<%--            <!-- 表头结束 -->--%>
+<%--            <!-- 表BODY -->--%>
+<%--            <div class="collapse " id="collapseExample2" style=" display:block;">--%>
+<%--                <div class="hangbanlist-body " style=" background-color:#FEFCFC;">--%>
+<%--                    <ul class="list-inline">--%>
+<%--                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
+<%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
+<%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
 
 
-                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>
-                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li class="w-percentage-20">80折(M)</li>
-                        <li class="w-percentage-25">座位数：≥9</li>
-                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
+<%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
+<%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                    </ul>--%>
+<%--                    <ul class="list-inline">--%>
+<%--                        <li class="w-percentage-20">80折(M)</li>--%>
+<%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
+<%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
 
 
 
-                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>
-                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-                    </ul>
-                    <!-- 更多舱位 -->
-                    <div class="panel " style="display:none;  background-color:#FEFCFC;">
+<%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>--%>
+<%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                    </ul>--%>
+<%--                    <!-- 更多舱位 -->--%>
+<%--                    <div class="panel " style="display:none;  background-color:#FEFCFC;">--%>
+<%--                        <ul class="list-inline">--%>
+<%--                            <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
+<%--                            <li class="w-percentage-25">座位数：≥9</li>--%>
+<%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
+
+
+<%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
+<%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                        </ul>--%>
+<%--                        <ul class="list-inline">--%>
+<%--                            <li class="w-percentage-20"><strong class=" red">特惠(D)</strong></li>--%>
+<%--                            <li class="w-percentage-25">座位数：≤5</li>--%>
+<%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥2980</span></li>--%>
+
+
+<%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥2560</strong></li>--%>
+<%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                        </ul>--%>
+<%--                        <ul class="list-inline">--%>
+<%--                            <li class="w-percentage-20"><strong class="red">紧急通道(D)</strong></li>--%>
+<%--                            <li class="w-percentage-25">座位数：=1</li>--%>
+<%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
+
+
+<%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
+<%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                        </ul>--%>
+<%--                        <ul class="list-inline">--%>
+<%--                            <li class="w-percentage-20">80折(M)</li>--%>
+<%--                            <li class="w-percentage-25">座位数：≥9</li>--%>
+<%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
+
+
+<%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>--%>
+<%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <!-- 更多舱位 结束 -->--%>
+<%--                    <div class=" lh30 text-right"> <a href="#" class="mar-right-20 font12 flip">更多舱位</a></div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <!-- 表BODY 结束 -->--%>
+<%--        </div>--%>
+
+        <c:forEach items="${flightList}" var="flight">
+            <div>
+                <!-- 表头 -->
+                <ul class="list-inline bor-bottom-solid-1  ">
+                    <li class="w-percentage-25"><img src="img/air/CA.png" width="24" height="24"> <strong>国航</strong> ${flight.idcar}</li>
+                    <li class="text-right w80"><strong class="time ">${flight.start_time}</strong></li>
+                    <li class=""> —— </li>
+                    <li class="w80"> <strong class="time ">${flight.end_time}</strong></li>
+                    <li class="w100 text-right"> ${flight.cityStart.airport}</li>
+                    <li class=""> —— </li>
+                    <li class=" w100">${flight.cityEnd.airport}</li>
+
+                </ul>
+                <!-- 表头结束 -->
+                <!-- 表BODY -->
+                <div class="collapse" id="collapseExample" style=" display:block;">
+                    <div class="hangbanlist-body " style=" background-color:#FEFCFC;">
                         <ul class="list-inline">
-                            <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>
-                            <li class="w-percentage-25">座位数：≥9</li>
-                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
-
-
-                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>
+                            <li class="w-percentage-20"><strong class="blue-0093dd">头等舱</strong></li>
+                            <li class="w-percentage-25">座位数：${flight.number_3}</li>
+                            <li class="w-percentage-25">票面价：<span class="rmb">￥${flight.price_3}</span></li>
                             <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
                         </ul>
                         <ul class="list-inline">
-                            <li class="w-percentage-20"><strong class=" red">特惠(D)</strong></li>
-                            <li class="w-percentage-25">座位数：≤5</li>
-                            <li class="w-percentage-25">票面价：<span class="rmb">￥2980</span></li>
-
-
-                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥2560</strong></li>
+                            <li class="w-percentage-20"><strong class=" red">商务舱</strong></li>
+                            <li class="w-percentage-25">座位数：${flight.number_2}</li>
+                            <li class="w-percentage-25">票面价：<span class="rmb">￥${flight.price_2}</span></li>
                             <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
                         </ul>
                         <ul class="list-inline">
-                            <li class="w-percentage-20"><strong class="red">紧急通道(D)</strong></li>
-                            <li class="w-percentage-25">座位数：=1</li>
-                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
-
-
-                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>
+                            <li class="w-percentage-20"><strong class=" red">经济舱</strong></li>
+                            <li class="w-percentage-25">座位数：${flight.number_1}</li>
+                            <li class="w-percentage-25">票面价：<span class="rmb">￥${flight.price_1}</span></li>
                             <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-                        </ul>
-                        <ul class="list-inline">
-                            <li class="w-percentage-20">80折(M)</li>
-                            <li class="w-percentage-25">座位数：≥9</li>
-                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
-
-
-                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>
-                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-
                         </ul>
                     </div>
-                    <!-- 更多舱位 结束 -->
-                    <div class=" lh30 text-right"> <a href="#" class="mar-right-20 font12 flip">更多舱位</a></div>
                 </div>
+                <!-- 表BODY 结束 -->
             </div>
-            <!-- 表BODY 结束 -->
-        </div>
-
-        <div>
-            <!-- 表头 -->
-            <ul class="list-inline bor-bottom-solid-1  ">
-                <li class="w-percentage-25"><img src="img/air/CA.png" width="24" height="24"> <strong>国航</strong> CA4109<span
-                        class="gray-999 font12 mar-left-10">机型：空客320（中）</span></li>
-                <li class="text-right w80"> <strong class="time ">16:30</strong></li>
-                <li class=""> —— </li>
-                <li class="w80"> <strong class="time ">23:30</strong></li>
-                <li class="w100 text-right"> 成都双流T2</li>
-                <li class=""> —— </li>
-                <li class=" w100"> 北京首都T1 </li>
-                <li class="w-percentage-20 text-center"> <span class="gray-999 ">机建 + 燃油：</span><span class="gray-999 rmb font12">￥50
-								+ ￥20</span></li>
-            </ul>
-            <!-- 表头结束 -->
-            <!-- 表BODY -->
-            <div class="collapse" id="collapseExample" style=" display:block;">
-                <div class="hangbanlist-body " style=" background-color:#FEFCFC;">
-                    <ul class="list-inline">
-                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>
-                        <li class="w-percentage-25">座位数：≥9</li>
-                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>
+    </c:forEach>
+<%--        <div>--%>
+<%--            <!-- 表头 -->--%>
+<%--            <ul class="list-inline bor-bottom-solid-1  ">--%>
+<%--                <li class="w-percentage-25"><img src="img/air/CA.png" width="24" height="24"> <strong>国航</strong> CA4109<span--%>
+<%--                        class="gray-999 font12 mar-left-10">机型：空客320（中）</span></li>--%>
+<%--                <li class="text-right w80"> <strong class="time ">16:30</strong></li>--%>
+<%--                <li class=""> —— </li>--%>
+<%--                <li class="w80"> <strong class="time ">23:30</strong></li>--%>
+<%--                <li class="w100 text-right"> 成都双流T2</li>--%>
+<%--                <li class=""> —— </li>--%>
+<%--                <li class=" w100"> 北京首都T1 </li>--%>
+<%--                <li class="w-percentage-20 text-center"> <span class="gray-999 ">机建 + 燃油：</span><span class="gray-999 rmb font12">￥50--%>
+<%--								+ ￥20</span></li>--%>
+<%--            </ul>--%>
+<%--            <!-- 表头结束 -->--%>
+<%--            <!-- 表BODY -->--%>
+<%--            <div class="collapse" id="collapseExample" style=" display:block;">--%>
+<%--                <div class="hangbanlist-body " style=" background-color:#FEFCFC;">--%>
+<%--                    <ul class="list-inline">--%>
+<%--                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
+<%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
+<%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
 
 
-                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>
-                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li class="w-percentage-20"><strong class=" red">特惠(D)</strong></li>
-                        <li class="w-percentage-25">座位数：≤5</li>
-                        <li class="w-percentage-25">票面价：<span class="rmb">￥2980</span></li>
+<%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
+<%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                    </ul>--%>
+<%--                    <ul class="list-inline">--%>
+<%--                        <li class="w-percentage-20"><strong class=" red">特惠(D)</strong></li>--%>
+<%--                        <li class="w-percentage-25">座位数：≤5</li>--%>
+<%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥2980</span></li>--%>
 
 
-                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥2560</strong></li>
-                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 表BODY 结束 -->
-        </div>
+<%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥2560</strong></li>--%>
+<%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
+<%--                    </ul>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <!-- 表BODY 结束 -->--%>
+<%--        </div>--%>
 
     </div>
 

@@ -221,8 +221,6 @@ ${pageContext.request.contextPath}
 <%--                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
 <%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
 <%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
-
-
 <%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
 <%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
 <%--                    </ul>--%>
@@ -230,9 +228,6 @@ ${pageContext.request.contextPath}
 <%--                        <li class="w-percentage-20">80折(M)</li>--%>
 <%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
 <%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
-
-
-
 <%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>--%>
 <%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
 <%--                    </ul>--%>
@@ -242,7 +237,6 @@ ${pageContext.request.contextPath}
 <%--                            <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
 <%--                            <li class="w-percentage-25">座位数：≥9</li>--%>
 <%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
-
 
 <%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
 <%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
@@ -269,11 +263,8 @@ ${pageContext.request.contextPath}
 <%--                            <li class="w-percentage-20">80折(M)</li>--%>
 <%--                            <li class="w-percentage-25">座位数：≥9</li>--%>
 <%--                            <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
-
-
 <%--                            <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥998</strong></li>--%>
 <%--                            <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
-
 <%--                        </ul>--%>
 <%--                    </div>--%>
 <%--                    <!-- 更多舱位 结束 -->--%>
@@ -294,7 +285,6 @@ ${pageContext.request.contextPath}
                     <li class="w100 text-right"> ${flight.cityStart.airport}</li>
                     <li class=""> —— </li>
                     <li class=" w100">${flight.cityEnd.airport}</li>
-
                 </ul>
                 <!-- 表头结束 -->
                 <!-- 表BODY -->
@@ -345,8 +335,6 @@ ${pageContext.request.contextPath}
 <%--                        <li class="w-percentage-20"><strong class="blue-0093dd">特殊舱位(D)</strong></li>--%>
 <%--                        <li class="w-percentage-25">座位数：≥9</li>--%>
 <%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥1070</span></li>--%>
-
-
 <%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥1020</strong> <span class="gray font12">1.9折</span></li>--%>
 <%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
 <%--                    </ul>--%>
@@ -354,8 +342,6 @@ ${pageContext.request.contextPath}
 <%--                        <li class="w-percentage-20"><strong class=" red">特惠(D)</strong></li>--%>
 <%--                        <li class="w-percentage-25">座位数：≤5</li>--%>
 <%--                        <li class="w-percentage-25">票面价：<span class="rmb">￥2980</span></li>--%>
-
-
 <%--                        <li class="w-percentage-20 ">优惠价：<strong class="rmb orange-f60 font16">￥2560</strong></li>--%>
 <%--                        <li class="pull-right "><button type="button" class="btn btn-danger btn-sm" onClick="window.location.href ='在线预订/政策选择.html';">订票</button></li>--%>
 <%--                    </ul>--%>
@@ -363,7 +349,6 @@ ${pageContext.request.contextPath}
 <%--            </div>--%>
 <%--            <!-- 表BODY 结束 -->--%>
 <%--        </div>--%>
-
     </div>
 
     <!-- 分页 -->
